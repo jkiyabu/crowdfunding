@@ -24,7 +24,11 @@
         <br>
         <input #newGoal required>
       </div>
-      <button (click)="submitForm(newTitle.value, newStarter.value, newDescription.value, newGoal.value); newTitle.value=''; newStarter.value=''; newDescription.value=''; newGoal.value=''">Add</button>
+      <button class="btn" (click)="submitForm(newTitle.value, newStarter.value, newDescription.value, newGoal.value); newTitle.value=''; newStarter.value=''; newDescription.value=''; newGoal.value=''">Add</button>
     </div>
   </div>
+</div>
+
+<div>
+  <app-welcome></app-welcome>
 </div>

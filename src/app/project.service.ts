@@ -18,6 +18,16 @@ export class ProjectService {
     this.projects.push(newProject);
   }
 
+  updateProject(localUpdatedProject) {
+    var projectEntryInFirebase = this.getProjectById(localUpdatedProject.$key);
+    projectEntryInFirebase.update({title: localUpdatedProject.title, starter: localUpdatedProject.starter, description: localUpdatedProject.description, goal: localUpdatedProject.goal});
+  }
+
+  deleteProject(localDeletedProject) {
+    var projectEntryInFirebase = this.getProjectById(localDeletedProject.$key);
+    projectEntryInFirebase.remove();
+  }
+
   getProjectById(projectId: string) {
     return this.angularFire.database.object('projects/' + projectId);
   }

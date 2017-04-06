@@ -1,0 +1,21 @@
+<h4>Edit Project</h4>
+
+<label>New title:</label>
+<input [(ngModel)]="selectedProject.title">
+<br>
+
+<label>New starter:</label>
+<input [(ngModel)]="selectedProject.starter">
+<br>
+
+<label>New description:</label>
+<input [(ngModel)]="selectedProject.description">
+<br>
+
+<label>New goal:</label>
+<input [(ngModel)]="selectedProject.goal">
+<br>
+
+<button (click)="beginUpdatingProject(selectedProject)">Update</button>
+<hr>
+<button (click)="beginDeletingProject(selectedProject)">Delete</button>
