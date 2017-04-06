@@ -13,10 +13,20 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running end-to-end tests
+## Setup firebase database
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+* Create a database with firebase
+* Create a api-keys.ts file in app directory
+* In api-keys.ts place with your information:
+
+    export var masterFirebaseConfig = {
+      apiKey: "xxxx",
+      authDomain: "xxxx.firebaseapp.com",
+      databaseURL: "https://xxxx.firebaseio.com",
+      storageBucket: "xxxx.appspot.com",
+      messagingSenderId: "xxxx"
+    };
+
 
 ## Deploying to GitHub Pages
 
@@ -31,6 +41,7 @@ To get more help on the `angular-cli` use `ng help` or go check out the [Angular
 * Create router file
 * Create welcome component and routes that will eventually display list of projects
 * Create project model
+* Create project service
 * Create database with firebase
 * List projects on welcome page
 * Create dynamic routes component to display information about an individual project
