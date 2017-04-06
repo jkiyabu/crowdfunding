@@ -4,7 +4,7 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Injectable()
 export class ProjectService {
-  projects : FirebaseListObservable<any[]>;
+  projects: FirebaseListObservable<any[]>;
 
   constructor(private angularFire: AngularFire) {
     this.projects = angularFire.database.list('projects');

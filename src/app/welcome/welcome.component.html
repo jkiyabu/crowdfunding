@@ -1,6 +1,11 @@
 <h2>Available Projects for funding</h2>
+<select (change)="onChange($event.target.value)">
+  <option value="allProjects" selected="selected">All Projects</option>
+  <option value="highGoal">High Goals</option>
+  <option value="lowGoal">Low Goals</option>
+</select>
 
-<div *ngFor="let project of projects | async" class="panel panel-default">
+<div *ngFor="let project of projects | async | goal:filterByGoal" class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(project)">{{project.title}}</h3>
     <h5>started by {{project.starter}}</h5>
