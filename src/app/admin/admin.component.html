@@ -1,0 +1,30 @@
+<div class="panel panel-dafault">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add a project</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Project title:</label>
+        <br>
+        <input required #newTitle>
+      </div>
+      <div>
+        <label>Starter:</label>
+        <br>
+        <input #newStarter>
+      </div>
+      <div>
+        <label>Description:</label>
+        <br>
+        <textarea #newDescription required></textarea>
+      </div>
+      <div>
+        <label>Goal:</label>
+        <br>
+        <input #newGoal required>
+      </div>
+      <button (click)="submitForm(newTitle.value, newStarter.value, newDescription.value, newGoal.value); newTitle.value=''; newStarter.value=''; newDescription.value=''; newGoal.value=''">Add</button>
+    </div>
+  </div>
+</div>

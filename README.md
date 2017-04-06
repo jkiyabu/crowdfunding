@@ -44,5 +44,5 @@ To get more help on the `angular-cli` use `ng help` or go check out the [Angular
 * Create project service
 * Create database with firebase
 * List projects on welcome page
-* Create dynamic routes component to display information about an individual project
 * Create admin component for adding, updating and deleting projects
+* Create dynamic routes component to display information about an individual project
