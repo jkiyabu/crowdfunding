@@ -1,0 +1,5 @@
+<h2>{{(projectToDisplay | async)?.title}}</h2>
+<p>started by {{(projectToDisplay | async)?.starter}}</p>
+<br>
+<p>{{(projectToDisplay | async)?.description}}</p>
+<h4>Goal: ${{(projectToDisplay | async)?.goal}}</h4>

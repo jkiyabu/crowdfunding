@@ -18,4 +18,7 @@ export class ProjectService {
     this.projects.push(newProject);
   }
 
+  getProjectById(projectId: string) {
+    return this.angularFire.database.object('projects/' + projectId);
+  }
 }
